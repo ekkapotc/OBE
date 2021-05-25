@@ -4,8 +4,10 @@ import matplotlib.pyplot as plt
 
 df = pd.read_excel('OBE.xlsx')
 
+df.set_index(keys='ID',inplace=True)
 print('\nCourse Record:\n')
-print(df.set_index(keys='ID').to_string())
+print(df.to_string())
+
 
 grades = ['A','B+','B','C+','C','D+','D','F']
 grade_counts = [0 for _ in range (0,len(grades))]
@@ -32,7 +34,7 @@ for i,row in df.iterrows():
 plt.xlabel('Grade')
 plt.ylabel('Number of Students')
 plt.title('Grade Distribution')
-plt.bar( x=grades, height=grade_counts  , width=1.0, color='yellow' , edgecolor='red' )
+plt.bar( grades, grade_counts  , width=1.0, color='yellow' , edgecolor='red' )
 plt.savefig('grade_dist.png',dpi=400)
 plt.close()
 
