@@ -37,17 +37,16 @@ plt.savefig('grade_dist.png',dpi=400)
 plt.close()
 
 #Score Distribution
-names = df['Name'].tolist()
-students = []
-for name in names:
-    tmp = name.split(' ',1)
-    if len(tmp) > 1:
-        students.append(tmp[1])
+students = df['Name'].tolist()
+for i,name in enumerate(students):
+    last_name = name.split(' ',1)
+    if len(last_name) > 1:
+        students[i] = last_name[1]
     else:
-        students.append(tmp[0])
+        students[i] = last_name[0]
 
 scores   = df['Total'].tolist()
-positions = [2*i for i in range(0,len(names))]
+positions = [2*i for i in range(0,len(students))]
 
 plt.xlabel('Student')
 plt.ylabel('Score')
