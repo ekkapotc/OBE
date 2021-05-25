@@ -40,7 +40,11 @@ plt.close()
 names = df['Name'].tolist()
 students = []
 for name in names:
-    students.append(name.split(' ',1)[1])
+    tmp = name.split(' ',1)
+    if len(tmp) > 1:
+        students.append(tmp[1])
+    else:
+        students.append(tmp[0])
 
 scores   = df['Total'].tolist()
 positions = [2*i for i in range(0,len(names))]
