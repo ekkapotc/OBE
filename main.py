@@ -8,7 +8,6 @@ df.set_index(keys='ID',inplace=True)
 print('\nCourse Record:\n')
 print(df.to_string())
 
-
 grades = ['A','B+','B','C+','C','D+','D','F']
 grade_counts = [0 for _ in range (0,len(grades))]
 
@@ -57,5 +56,3 @@ plt.xticks(ticks=positions,labels=students,rotation=0, ha="center")
 plt.bar(positions, scores , width=1.0 , color='yellow' , edgecolor='red')
 plt.savefig('score_dist.png',dpi=400)
 plt.close()
-
-
