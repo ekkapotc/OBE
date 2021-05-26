@@ -1,2 +1,2 @@
 # OBE
-Plot Bar Charts for Grade and Score Distibution with Python
+Plot Bar Charts for Grade and Score Distribution with Python
