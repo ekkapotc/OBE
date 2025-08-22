@@ -1,6 +1,17 @@
-# OBE
-This code snippet is used to plot bar charts for grade and score distribution with Python.
+# OBE (Outcome-Based Education)
 
-Input : Excel spreadsheet 
+This Python script generates **bar charts** for grade and score distributions.
 
-Library-dependencies : pandas , matplotlib
+## Input
+
+- An **Excel spreadsheet** containing grades and scores.
+
+## Library Dependencies
+
+- `pandas`  
+- `matplotlib`
+
+## Features
+
+- Visualizes grade distributions with bar charts.  
+- Easy-to-use script for analyzing student performance.
